@@ -1,0 +1,17 @@
+{
+  "name": "terraform-experiments",
+  "version": "1.0.0",
+  "scripts": {
+    "import": "cd environments/dev && terraform import module.buckets.google_storage_bucket.mikes_bucket mike-important-notes",
+    "init": "cd environments/dev && terraform init",
+    "plan": "cd environments/dev && terraform plan",
+    "apply": "cd environments/dev && terraform apply --auto-approve",
+    "destroy": "cd environments/dev && terraform destroy --auto-approve",
+    "google_default_login": "gcloud auth application-default login",
+    "set_google_project": "gcloud config set project mikes-demo",
+    "move_state_file": "terraform init -migrate-state",
+    "move_state_file_reconfigure": "terraform init -reconfigure"
+  },
+  "author": "",
+  "license": "ISC"
+}
